@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Software Engineering Internship | SparkTech</title>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --secondary: #fbbf24;
+      --bg: #f8fafc;
+      --text: #1e293b;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Inter", sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #e0f2fe 0%, #f9fafb 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .container {
+      background: #fff;
+      width: 100%;
+      max-width: 1000px;
+      border-radius: 1.25rem;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+      overflow: hidden;
+    }
+
+    /* Hero */
+    header {
+      background: url("https://images.unsplash.com/photo-1531498916111-1c1324bd638f?auto=format&fit=crop&w=1350&q=80") center/cover;
+      padding: 5rem 2rem;
+      position: relative;
+    }
+    header::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      backdrop-filter: brightness(0.55);
+    }
+    header .hero {
+      position: relative;
+      z-index: 1;
+      color: #fff;
+      text-align: center;
+      max-width: 700px;
+      margin: auto;
+    }
+    header h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      line-height: 1.2;
+    }
+    header p {
+      margin-top: 1rem;
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-block;
+      padding: 0.9rem 2.2rem;
+      border-radius: 9999px;
+      background: var(--primary);
+      color: #fff;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      margin: 0.75rem;
+    }
+    .btn:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
+    }
+
+    /* Sections */
+    section {
+      padding: 3rem 2rem;
+    }
+
+    /* Cards */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .card {
+      background: var(--bg);
+      border-radius: 1rem;
+      padding: 2rem;
+      text-align: center;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+    }
+    .card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+      color: var(--primary-dark);
+    }
+    .card p {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      color: var(--text);
+    }
+
+    /* FAQ */
+    .faq {
+      max-width: 750px;
+      margin: 2rem auto 0;
+    }
+    details {
+      background: var(--bg);
+      margin-bottom: 1rem;
+      padding: 1rem 1.5rem;
+      border-radius: 0.75rem;
+      cursor: pointer;
+    }
+    summary {
+      font-weight: 600;
+      color: var(--primary);
+      outline: none;
+    }
+    details[open] summary {
+      margin-bottom: 0.5rem;
+    }
+
+    @media (max-width: 500px) {
+      header h1 {
+        font-size: 1.75rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <!-- Hero -->
+    <header>
+      <div class="hero">
+        <h1>Summer 2025 Software Engineering Internship</h1>
+        <p>
+          Level‑up your skills by building real‑world products with mentors from
+          SparkTech’s award‑winning engineering team.
+        </p>
+        <a href="https://example.com/apply" class="btn">Apply Now</a>
+        <a
+          href="https://example.com/brochure.pdf"
+          class="btn"
+          style="background: var(--secondary); color: #000;"
+        >Download Brochure</a>
+      </div>
+    </header>
+
+    <!-- Why Join Us -->
+    <section>
+      <h2
+        style="text-align: center; font-size: 2rem; font-weight: 700; color: var(--text);"
+      >
+        Why Join Us?
+      </h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Hands‑On Projects</h3>
+          <p>
+            Ship features used by thousands of customers and add real impact to
+            your portfolio.
+          </p>
+        </div>
+        <div class="card">
+          <h3>1‑on‑1 Mentorship</h3>
+          <p>
+            Work closely with senior engineers who care about your growth and
+            career goals.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Stipend & Perks</h3>
+          <p>
+            Competitive stipend, free lunch, and access to all internal tech
+            talks and workshops.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Details Callout -->
+    <section style="background: var(--primary); color: #fff; text-align: center;">
+      <h2 style="font-size: 2rem; font-weight: 700;">Key Details</h2>
+      <p style="margin: 0.75rem 0;">
+        📅 June 30 – September 12, 2025 &nbsp;|&nbsp; 📍 Hybrid (Bangalore + Remote)
+      </p>
+      <a href="https://example.com/apply" class="btn" style="background: #fff; color: var(--primary-dark);">Apply Now</a>
+    </section>
+
+    <!-- FAQ -->
+    <section>
+      <h2
+        style="text-align: center; font-size: 2rem; font-weight: 700; color: var(--text);"
+      >
+        FAQ
+      </h2>
+      <div class="faq">
+        <details>
+          <summary>Who can apply?</summary>
+          <p>
+            Students enrolled in a B.E./B.Tech, M.E./M.Tech, or equivalent
+            program graduating in 2026 or later.
+          </p>
+        </details>
+        <details>
+          <summary>What is the selection process?</summary>
+          <p>
+            The process includes an online coding test, a technical interview,
+            and a culture‑fit discussion.
+          </p>
+        </details>
+        <details>
+          <summary>Is this internship paid?</summary>
+          <p>
+            Yes. Interns receive a monthly stipend of ₹30,000 plus meal and
+            transport allowances.
+          </p>
+        </details>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
